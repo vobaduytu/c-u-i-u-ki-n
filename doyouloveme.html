@@ -4,39 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      button {
-        position: relative;
-      }
-    </style>
   </head>
   <body>
-    <h1>Do you love me?</h1>
-    <button type="button" id="yes" onclick="yesbut()">Yes</button>
+    <h1>Do you love me</h1>
+    <button type="button" onclick="alert('<3');">yes</button>
     <button
       type="button"
+      style="position: relative; top: 0px; left: 0px"
       id="no"
-      style="top: 0px; left: 0px"
       onmouseover="nobut()"
     >
       No
     </button>
+
+    <script>
+      const noBtn = document.getElementById("no");
+      const maxtop = window.innerHeight - 150;
+      const maxleft = window.innerWidth - 150;
+
+      function nobut() {
+        noBtn.style.left = Math.floor(Math.random() * maxleft) + "px";
+        noBtn.style.top = Math.floor(Math.random() * maxtop) + "px";
+      }
+    </script>
   </body>
-  <script>
-    let maxtop, maxleft;
-    function windowUpdate() {
-      maxtop = window.innerHeight - 150;
-      maxleft = window.innerWidth - 150;
-    }
-    windowUpdate();
-    function yesbut() {
-      alert("<3");
-    }
-    function nobut() {
-      document.getElementById("no").style.left =
-        Math.floor(Math.random() * maxleft) + "px";
-      document.getElementById("no").style.top =
-        Math.floor(Math.random() * maxtop) + "px";
-    }
-  </script>
 </html>
