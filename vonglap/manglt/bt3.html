@@ -6,6 +6,18 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      let a = [1, 2, 2, 4, 5];
+      let max = a[0];
+      let tb;
+      for (let i = 1; i < a.length; i++) {
+        if (a[i] > max) {
+          max = a[i];
+          tb = (1 + 2 + 2 + 4 + 5) / 5;
+        }
+      }
+      document.write(max + "</br>");
+      document.write(tb);
+    </script>
   </body>
 </html>
