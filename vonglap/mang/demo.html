@@ -10,14 +10,14 @@
 
     let board = [];
     let data = "";
-    for (let i = 0; i < 5; i++) {
-      board[i] = new Array(0, 0, 0, 0, 0);
+    for (let i = 0; i < 3; i++) {
+      board[i] = new Array(".", ".", ".");
     }
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 3; i++) {
       data += "<br/>";
-      for (let j = 0; j < 5; j++) {
-        data += board[i][j] + "&nbsp;&nbsp;";
+      for (let j = 0; j < 3; j++) {
+        data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
       }
     }
 
@@ -29,9 +29,9 @@
       let j = prompt("Y: ");
       data = "";
       board[i][j] = "x";
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 3; i++) {
         data += "<br/>";
-        for (let j = 0; j < 5; j++) {
+        for (let j = 0; j < 3; j++) {
           data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
         }
       }
