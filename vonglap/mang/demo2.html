@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>XXXX</p>
+    <textarea id="ADCBCF" oninput="a()" cols="30" rows="10"></textarea>
+    <script>
+      const b = document.getElementById("ADCBCF");
+      let ADC = ["i love you"];
+      let c = 0;
+      function a() {
+        c++;
+        if (c > ADC.length) {
+          c = 0;
+        }
+        let d = [];
+        for (let i = 0; i < c; i++) {
+          d[i] = ADC[i];
+          console.log(d);
+        }
+        b.value = d.join("");
+      }
+    </script>
+  </body>
+</html>

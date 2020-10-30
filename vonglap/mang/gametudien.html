@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faking Textarea on Typing</title>
+  </head>
+  <body>
+    <h3>Type anything slowly</h3>
+    <textarea id="text-area" oninput="action()" cols="30" rows="10"></textarea>
+    <script>
+      const text = document.getElementById("text-area");
+      let adc = "Tôi tên Phước và tôi rất ngơ!!";
+      let count = 0;
+
+      function action() {
+        count++;
+        if (count > adc.length) {
+          count = 0;
+        }
+        let ddd = [];
+        for (let i = 0; i < count; i++) {
+          ddd[i] = adc[i];
+          console.log(ddd);
+        }
+        text.value = ddd.join("");
+      }
+    </script>
+  </body>
+</html>
