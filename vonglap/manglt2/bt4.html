@@ -7,9 +7,15 @@
   </head>
   <body>
     <script>
-      let a = " 1 2 3 4 5 6 7 8 89 10";
-      let b = a.split(" ");
-      document.write(b.length);
+      let a = ["3", "5", "6", "w"];
+      let N = 0;
+      for (let i = 0; i < a.length; i++) {
+        let H = Number(a[i]);
+        if (!isNaN(H)) {
+          N++;
+        }
+      }
+      document.write(N);
     </script>
   </body>
 </html>
