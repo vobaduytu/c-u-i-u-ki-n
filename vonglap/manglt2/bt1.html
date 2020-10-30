@@ -15,9 +15,9 @@
         [3, 10, 26, 7],
       ];
 
-      for (let i = 0; i < a.length; i++) {
+      for (let i in a) {
         document.write("<br>" + i);
-        for (let j = 0; j < a.length; j++) {
+        for (let j in a[i]) {
           document.write(" " + a[i][j]);
         }
       }
