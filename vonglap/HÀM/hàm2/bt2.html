@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  
+    <div id="input"></div>
+    <script>
+         function processConfirm(answer) {
+        let result = "";
+        if (answer) {
+          result = "ok.";
+          let b = prompt()
+      function meterToFoot(meter) {
+        return 3.279 * meter;
+      }
+      document.write(meterToFoot(b))
+        } else {
+          result = "feet sang meters.";
+          let c = prompt()
+      function footToMeter(foot) {
+        return 0.305 * foot;
+      }
+      document.write(footToMeter(c))
+        }
+        return result;
+      }
+      let confirmAnswer = confirm("meters sang feet");
+      let theAnswer = processConfirm(confirmAnswer);
+      alert(theAnswer);
+      
+    </script>
+  </body>
+</html>
