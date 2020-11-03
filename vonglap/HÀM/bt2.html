@@ -16,12 +16,12 @@
         type="number"
         id="inputFaharenheit"
         placeholder="Fahrenheit"
-        oninput="temperatureConverter(this.value)"
-        onchange="temperatureConverter(this.value)"
+        oninput="has(this.value)"
+        onchange="has(this.value)"
       />
       <p>celsius: <span id="outputCelsius"></span></p>
       <script>
-        function temperatureConverter(F) {
+        function has(F) {
           F = parseFloat(F);
           document.getElementById("outputCelsius").innerHTML = (F - 32) / 1.8;
         }
