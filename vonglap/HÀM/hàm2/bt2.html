@@ -6,32 +6,55 @@
     <title>Document</title>
   </head>
   <body>
-  
+    <input type="button" value="met to foot" onclick="convertMetToFoot()" />
+    <input type="button" value="foot to met" onclick="convertFootToMet()" />
     <div id="input"></div>
     <script>
-         function processConfirm(answer) {
-        let result = "";
-        if (answer) {
-          result = "ok.";
-          let b = prompt()
       function meterToFoot(meter) {
         return 3.279 * meter;
       }
-      document.write(meterToFoot(b))
-        } else {
-          result = "feet sang meters.";
-          let c = prompt()
+
       function footToMeter(foot) {
         return 0.305 * foot;
       }
-      document.write(footToMeter(c))
-        }
-        return result;
+
+      function convertMetToFoot() {
+        let b = prompt();
+        alert(meterToFoot(b));
       }
-      let confirmAnswer = confirm("meters sang feet");
-      let theAnswer = processConfirm(confirmAnswer);
-      alert(theAnswer);
-      
+
+      function convertFootToMet() {
+        let b = prompt();
+        alert(footToMeter(b));
+      }
     </script>
   </body>
 </html>
+
+<!-- 
+function meterToFoot(meter) {
+    return 3.279 * meter;
+  }
+
+  function footToMeter(foot) {
+    return 0.305 * foot;
+  }
+
+  function processConfirm(answer) {
+    let result = "";
+    if (answer) {
+      result = "ok.";
+      let b = prompt();
+      document.write(meterToFoot(b));
+    } else {
+      result = "feet sang meters.";
+      let c = prompt();
+      document.write(footToMeter(c));
+    }
+    return result;
+  }
+  let confirmAnswer = confirm("meters sang feet");
+  let theAnswer = processConfirm(confirmAnswer);
+  alert(theAnswer);
+    console.log(meterToFoot(2039));
+    meterToFoot(2039); -->
