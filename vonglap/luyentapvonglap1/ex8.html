@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="choi" onclick="guessNumber()" />
+
+    <script>
+      function guessNumber() {
+        let khoangMuonDoan = Number(prompt("Muon doan trong khoang nao?"));
+
+        const soNgauNhien = Math.floor(Math.random() * (khoangMuonDoan + 1));
+
+        for (let i = 1; i <= 3; i++) {
+          const soMuonDoan = Number(prompt("Ban muon doan so nao?"));
+
+          if (soMuonDoan === soNgauNhien) {
+            alert("Chuc mung!");
+            return;
+          }
+
+          if (soMuonDoan < soNgauNhien) {
+            alert("So ban doan be hon so ngau nhien");
+          } else 
+            alert("So ban doan lon hon so ngau nhien");
+          
+        } alert("Chuc ban may man lan sau");
+
+       
+      }
+    </script>
+  </body>
+</html>

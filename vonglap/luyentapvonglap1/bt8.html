@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="choi" onclick="doanSo()" />
+    <script>
+      function doanSo() {
+        let khoangMuonDoan = Number(prompt("ban muon doan trong khoang"));
+
+        const songaunhien = Math.floor(Math.random() * khoangMuonDoan + 1);
+
+        for (let i = 1; i <= 3; i++) {
+          const consochon = Number(prompt("con so chon"));
+
+          if (consochon === songaunhien) {
+            alert("chucmung");
+
+            return;
+          }
+
+          if (consochon < songaunhien) {
+            alert("so ban chon be hon so ngau nhien");
+          } else {
+            alert("so ban chon lon hon so ngau nhien");
+          }
+        }
+        alert("chuc ban may man lan sau");
+      }
+    </script>
+  </body>
+</html>

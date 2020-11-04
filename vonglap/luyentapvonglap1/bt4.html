@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num1 = 1;
+      let num2 = 1;
+      let sonngu=0
+
+      for (let i = 1;sonngu<1 ; i++) {
+        let newnum = num1 + num2;
+        num1 = num2;
+        num2 = newnum;
+
+        if (newnum % 5 === 0) {
+          document.write(newnum);
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>
