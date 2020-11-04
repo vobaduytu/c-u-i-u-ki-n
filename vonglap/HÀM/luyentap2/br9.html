@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function demKyTuTrongMang(board, a) {
+      //     let board = [0];
+      //     let count = 0;
+      //     for (let i = 0; i < board.length; i++) {
+      //       if ((a = board[i])) {
+      //         return count++;
+      //       }
+      //       return -1;
+      //     }
+      //   }
+      //   let mang = [1, 2, 2, 5, 5, 5, 5];
+      //   let board = demKyTuTrongMang(mang);
+      //   document.write(demKyTuTrongMang(mang), demKyTuTrongMang(5));
+
+      function demKyTuTrongMang(board, a) {
+        let count = 0;
+        for (let i = 0; i < board.length; i++) {
+          if (a === board[i]) {
+            count++;
+          }
+        }
+
+        if (count === 0) {
+            return -1
+        } else {
+            return count;
+        }
+      }
+      
+      let mang = [1, 2, 2, 5, 5, 5, 5];
+      let result = demKyTuTrongMang(mang, 5)
+
+      document.write(mang.toString() + ": " + result);
+    </script>
+  </body>
+</html>
