@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <script>
-      let V = prompt("enter a number");
-      let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-      for (let i = 0; i < number.length; i++) {
-        if (V == number[i]) {
-          alert("V is in the array");
+        let soNguyen = [0,1,2,3,4,5,6,7,8,9]
+        let V = prompt()
+        for(let i = 0; i < soNguyen.length; i++){
+            if(V===soNguyen[i]){
+               alert("V is in the array")
+            }else{
+                alert("V is not in the array")
+            }
         }
-        alert("V is not in the array");
-      }
+
     </script>
-  </body>
+</body>
 </html>
