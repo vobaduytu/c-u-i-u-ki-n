@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: monospace;
+      }
+    </style>
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div>
+      <h2>Caro simple</h2>
+      <div id="caro_game"></div>
+      <button type="button" onclick="changeButton()">Play</button>
+    </div>
+    <script>
+      let game = document.getElementById("caro_game");
+      let board = [];
+      let data = "";
+      // tạo khung cho bảngbảng
+      for (let i = 0; i < 3; i++) {
+        board[i] = [".", ".", "."];
+      }
+      //board = [
+      //  [".", ".", "."],
+      //  [".", ".", "."],
+      //  [".", ".", "."]
+      //]
+      // in bảng
+      function printBoard() {
+        let data = "";
+        for (let i = 0; i < 3; i++) {
+          data = data + "<br>";
+          // data = "<br>.____"
+          for (let j = 0; j < 3; j++) {
+            data = data + board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            // console.log("data: " + i + " " + j);
+            // console.log(data);
+          }
+        }
+        game.innerHTML = data;
+      }
+      printBoard();
+      let player = "X";
+      function changeButton() {
+        let i = prompt("X: ");
+        let j = prompt("Y: ");
+        board[i][j] = player;
+        printBoard();
+        if (checkGameBoard()) {
+          return alert(player + " Win");
+        }
+        lanLuot();
+      }
+      function lanLuot() {
+        if (player === "X") {
+          player = "O";
+        } else {
+          player = "X";
+        }
+      }
+      function check3Cell(cell1, cell2, cell3) {
+        return cell1 !== "." && cell1 === cell2 && cell1 === cell3;
+      }
+      function checkGameBoard() {
+        for (let i = 0; i < 3; i++) {
+          if (check3Cell(board[i][0], board[i][1], board[i][2])) {
+            return true;
+          }
+          if (check3Cell(board[0][i], board[1][i], board[2][i])) {
+            return true;
+          }
+        }
+        if (check3Cell(board[0][0], board[1][1], board[2][2])) {
+          return true;
+        }
+        if (check3Cell(board[0][2], board[1][1], board[2][0])) {
+          return true;
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>
