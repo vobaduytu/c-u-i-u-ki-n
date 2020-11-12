@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Cicrle(radius) {
+        this.radius = radius;
+        this.getArea = function () {
+          return Math.PI * radius * radius;
+        };
+      }
+      let cicrle1 = new Cicrle(2);
+      console.log(cicrle1);
+      console.log(cicrle1.getArea());
+    </script>
+  </body>
+</html>

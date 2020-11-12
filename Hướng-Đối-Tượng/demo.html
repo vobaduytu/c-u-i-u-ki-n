@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // tao 1 doi tuong
+      let hocSinh1 = {
+        // tao thuoc tinh
+        ten: "Tu",
+        tuoi: 19,
+        // tao phuong thuc
+        noi: function () {
+          return "Toi ten " + this.ten + " , toi " + this.tuoi + " tuoi";
+        },
+      };
+      // cach goi thuoc tinh
+      console.log(hocSinh1.ten);
+      console.log(hocSinh1["tuoi"]);
+      // cach goi phuong thuc
+      console.log(hocSinh1.noi());
+
+      let hocSinh2 = {
+        // tao thuoc tinh
+        ten: "Thang",
+        tuoi: 22,
+        // tao phuong thuc
+        noi: function () {
+          return "Toi ten " + this.ten + " , toi " + this.tuoi + " tuoi";
+        },
+      };
+      console.log(hocSinh2.noi());
+
+      // Lop (class): khai quat hoa cac doi tuong
+      // cach tao class
+      function HocSinh(ten, tuoi) {
+        // tao thuoc tinh cua class
+        this.ten = ten;
+        this.tuoi = tuoi;
+        // tao phuong thuc cua class
+        this.noi = function () {
+          return "Toi ten " + this.ten + " , toi " + this.tuoi + " tuoi";
+        };
+      }
+
+      // cach tao doi tuong tu class
+      let hocSinh3 = new HocSinh("Anh", 23);
+
+      console.log(hocSinh1);
+      console.log(hocSinh2);
+      console.log(hocSinh3);
+    </script>
+  </body>
+</html>
