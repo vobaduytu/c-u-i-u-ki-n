@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="500"
+      height="500"
+      style="border: 1px solid red"
+    ></canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      class Circle {
+        constructor(x, y, radius, color) {
+          this.x = x;
+          this.y = y;
+          this.radius = radius;
+          this.color = color;
+        }
+        render(canvas) {
+          const ctx = canvas.getContext("2d");
+          ctx.fillStyle = this.color;
+          ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+          ctx.fill();
+        }
+      }
+      const newCircle = new Circle(40, 50, 30, "#FF3300");
+      newCircle.render(canvas);
+    </script>
+  </body>
+</html>

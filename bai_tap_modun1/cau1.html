@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cau 1</title>
+  </head>
+  <body>
+    <script>
+      // cau 1a
+      function generateArray(size) {
+        let result = [];
+        while (result.length < size) {
+          result.push(Math.floor(Math.random() * 81) + 10);
+        }
+        return result;
+      }
+      // cau 1b
+      function printArray(arr) {
+        return arr.join("-");
+      }
+      // cau 1c
+      function find(value, arr) {
+        return arr.indexOf(value);
+      }
+      // cau 1d
+      function removeAll(value, arr) {
+        if (arr.indexOf(value) !== -1) {
+          arr = arr.filter((currentValue) => currentValue !== value);
+        }
+        return arr;
+      }
+      // cau 1e
+      function main() {
+        let size = getPositiveInteger("Enter size:");
+        let array = generateArray(size);
+        displayResult(" Array: " + printArray(array));
+        let value = getPositiveInteger("Enter value to remove from array");
+        let arrayAfterRemove = removeAll(value, array);
+        displayResult(
+          ` Array after remove ${value}: ${printArray(arrayAfterRemove)}`
+        );
+      }
+      main();
+      function getPositiveInteger(message) {
+        let num = -1;
+        while (!Number.isInteger(num) || num < 0) {
+          num = Number(prompt(message));
+        }
+        return num;
+      }
+      function displayResult(message) {
+        alert(message);
+        document.write("<br>" + message);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    
+          let size = Number(prompt())
+         let size = getPositiveInteger();
+         let arr = [10, 20, 12, 24, 25];
+         function main() {
+            let array = generateArray(size);
+            alert("Array: " + printArray(array));
+            let value = getPositiveInteger("Nhập giá trị xóa khỏi mảng");
+  let newArray = removeAll(value, array);
+  alert(`mảng sau khi đã bị xóa ${value}: ${printArray(newArray)}`);
+         }
+      main();
+    </script>
+  </body>
+</html>
